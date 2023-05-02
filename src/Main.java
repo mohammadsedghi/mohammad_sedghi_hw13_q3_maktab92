@@ -7,7 +7,8 @@ public class Main {
         List<Person> people = getPerson();
 //        people.stream().sorted(Comparator.comparing(Person::getAge)).
 //                collect(Collectors.toList()).forEach(System.out::println);
-
+        people.stream().sorted(Comparator.comparing(Person -> Person.getAddress().getPostalCode()))
+                .collect(Collectors.toList()).forEach(System.out::println);
 
 
 
