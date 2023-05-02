@@ -3,6 +3,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 List<Person> people=getPerson();
+
+
     }
     public static List<Person> getPerson(){
        return List.of(new Person("ali","sedghi",25,
