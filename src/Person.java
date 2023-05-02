@@ -4,6 +4,10 @@ public class Person {
     int age;
     Address address;
 
+    public Address getAddress() {
+        return address;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -33,5 +37,15 @@ public class Person {
         this.lastName = lastName;
         this.age = age;
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                '}';
     }
 }
