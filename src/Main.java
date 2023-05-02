@@ -11,6 +11,8 @@ public class Main {
 //                .collect(Collectors.toList()).forEach(System.out::println);
 //        people.stream().sorted(Comparator.comparing(Person->Person.getLastName().length())).
 //                collect(Collectors.toList()).forEach(System.out::println);
+people.stream().filter(
+   Person->Person.getAddress().getCity()=="tehran"&&Person.getAddress().getZone()==5).forEach(System.out::println);
 
 
 
