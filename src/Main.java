@@ -5,16 +5,17 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         List<Person> people = getPerson();
-//        people.stream().sorted(Comparator.comparing(Person::getAge)).
-//                collect(Collectors.toList()).forEach(System.out::println);
-//        people.stream().sorted(Comparator.comparing(Person -> Person.getAddress().getPostalCode()))
-//                .collect(Collectors.toList()).forEach(System.out::println);
-//        people.stream().sorted(Comparator.comparing(Person->Person.getLastName().length())).
-//                collect(Collectors.toList()).forEach(System.out::println);
-people.stream().filter(
-   Person->Person.getAddress().getCity()=="tehran"&&Person.getAddress().getZone()==5).forEach(System.out::println);
-
-
+        people.stream().sorted(Comparator.comparing(Person::getAge)).
+                collect(Collectors.toList()).forEach(System.out::println);
+        System.out.println("=====================================================");
+        people.stream().sorted(Comparator.comparing(Person -> Person.getAddress().getPostalCode()))
+                .collect(Collectors.toList()).forEach(System.out::println);
+        System.out.println("=====================================================");
+        people.stream().sorted(Comparator.comparing(Person -> Person.getLastName().length())).
+                collect(Collectors.toList()).forEach(System.out::println);
+        System.out.println("=====================================================");
+        people.stream().filter(
+                Person -> Person.getAddress().getCity() == "tehran" && Person.getAddress().getZone() == 5).forEach(System.out::println);
 
 
     }
